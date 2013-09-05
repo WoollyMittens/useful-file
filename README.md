@@ -2,7 +2,7 @@
 
 An alternative for the HTML file input element.
 
-Try the <a href="http://www.woollymittens.nl/useful/default.php?url=file">demo</a>.
+Try the <a href="http://www.woollymittens.nl/useful/default.php?url=useful-file">demo</a>.
 
 ## How to include the script
 
