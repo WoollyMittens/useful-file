@@ -34,10 +34,14 @@
 			};
 			// update at least once
 			context.update(context.obj, readout);
+			// disable the start function so it can't be started twice
+			this.start = function () {};
 		};
 		this.update = function (element, readout) {
 			readout.innerHTML = element.value;
 		};
+		// go
+		this.start();
 	};
 
 }(window.useful = window.useful || {}));
