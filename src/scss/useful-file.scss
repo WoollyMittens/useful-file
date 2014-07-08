@@ -1,45 +1,38 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "mixins";
 /*
-	Reference styling for a file selector
+	file upload button
 */
-@media all {
-	@import "compass/css3";
-	@import "compass/utilities";
-	@import "_definitions";
-	@import "_typography" ;
-	/*
-		file upload button
-	*/
-	div.file {
+div.file {
+	@include box-sizing(border-box);
+	color : #fff;
+	height : 3em;
+	line-height : 3em;
+	padding-left : 1em;
+	cursor : pointer;
+	display : block;
+	overflow : hidden;
+	position : relative;
+	background-color : $color-passive;
+	* {
 		@include box-sizing(border-box);
-		cursor : pointer;
-		display : block;
-		overflow : hidden;
-		position : relative;
-		* {
-			@include box-sizing(border-box);
-		}
-		input {
-			@include opacity(0.01);
-			cursor : pointer;
-			height : 100%;
-			position : absolute;
-			bottom : 0;
-			top : 0;
-			right : 0;
-			font-size : 80px;
-			z-index : 1;
-		}
-		div.file-readout {
-			display : inline;
-		}
 	}
-	div.file:before {
-		content : "Select file: ";
+	input {
+		@include opacity(0.01);
+		cursor : pointer;
+		height : 100%;
+		position : absolute;
+		bottom : 0;
+		top : 0;
+		right : 0;
+		font-size : 80px;
+		z-index : 1;
+	}
+	div.file-readout {
+		display : inline;
 	}
 }
-@media (min-width: 1200px) {}
-@media (min-width: 980px) and (max-width: 1199px) {}
-@media (min-width: 768px) and (max-width: 979px) {}
-@media (max-width: 767px) {}
-@media (max-width: 480px) {}
-@media print {}
+div.file:before {
+	content : "Select file: ";
+}
