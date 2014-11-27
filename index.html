@@ -39,11 +39,9 @@
 				<script>
 				//<!--
 					// create new instances of the script
-					var files = new useful.Instances(
-						document.querySelectorAll('input.file'),
-						useful.File,
-						{}
-					);
+					var files = new useful.File().init({
+						'elements' : document.querySelectorAll('input.file')
+					});
 				//-->
 				</script>
 				<!-- Cut above this -->

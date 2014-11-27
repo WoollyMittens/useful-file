@@ -28,35 +28,9 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 
 ## How to start the script
 
-This is the safest way of starting the script, but allows for only one target element at a time.
-
 ```javascript
-var file = new useful.File( document.getElementById('id'), {});
-```
-
-### Using document.querySelectorAll
-
-This method allows CSS Rules to be used to apply the script to one or more nodes at the same time.
-
-```javascript
-var files = new useful.Instances(
-	document.querySelectorAll('input.file'),
-	useful.File,
-	{}
-);
-```
-
-The "Instances" function clones the settings for each element in the CSS rule.
-
-### Using jQuery
-
-This method is similar to the previous one, but uses jQuery for processing the CSS rule and cloning the settings.
-
-```javascript
-var files = [];
-$('input.file').each(function (index, element) {
-	files[index] = new useful.File( element, {});
-	files[index].start();
+var files = new useful.File().init({
+	'elements' : document.querySelectorAll('input.file')
 });
 ```
 
