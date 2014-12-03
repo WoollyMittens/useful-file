@@ -11,7 +11,7 @@ var useful = useful || {};
 useful.File = useful.File || function () {};
 
 // extend the constructor
-useful.File.prototype.Main = function (parent, cfg) {
+useful.File.prototype.Main = function (cfg, parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
