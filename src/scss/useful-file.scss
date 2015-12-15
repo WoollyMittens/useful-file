@@ -1,11 +1,11 @@
-@import "compass/css3";
-@import "compass/utilities";
+
+
 @import "mixins";
 /*
 	file upload button
 */
 div.file {
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 	color : #fff;
 	height : 3em;
 	line-height : 3em;
@@ -16,10 +16,10 @@ div.file {
 	position : relative;
 	background-color : $color-passive;
 	* {
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 	}
 	input {
-		@include opacity(0.01);
+		opacity: 0.01;
 		cursor : pointer;
 		height : 100%;
 		position : absolute;

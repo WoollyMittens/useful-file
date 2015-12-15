@@ -28,7 +28,6 @@ Applies the "clearfix" hack to a container with floating content
 /*
 	file upload button
 */
-/* line 7, ../../src/scss/useful-file.scss */
 div.file {
   box-sizing: border-box;
   color: #fff;
@@ -39,31 +38,21 @@ div.file {
   display: block;
   overflow: hidden;
   position: relative;
-  background-color: #ff6a00;
-}
-/* line 18, ../../src/scss/useful-file.scss */
-div.file * {
-  box-sizing: border-box;
-}
-/* line 21, ../../src/scss/useful-file.scss */
-div.file input {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
-  opacity: 0.01;
-  cursor: pointer;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  font-size: 80px;
-  z-index: 1;
-}
-/* line 32, ../../src/scss/useful-file.scss */
-div.file div.file-readout {
-  display: inline;
-}
+  background-color: #ff6a00; }
+  div.file * {
+    box-sizing: border-box; }
+  div.file input {
+    opacity: 0.01;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    font-size: 80px;
+    z-index: 1; }
+  div.file div.file-readout {
+    display: inline; }
 
-/* line 36, ../../src/scss/useful-file.scss */
 div.file:before {
-  content: "Select file: ";
-}
+  content: "Select file: "; }

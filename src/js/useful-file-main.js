@@ -12,12 +12,16 @@ useful.File = useful.File || function () {};
 
 // extend the constructor
 useful.File.prototype.Main = function (config, context) {
-	// properties
+
+	// PROPERTIES
+	
 	"use strict";
 	this.config = config;
 	this.context = context;
 	this.element = config.element;
-	// methods
+
+	// METHODS
+	
 	this.init = function () {
 		var wrapper, removed, readout;
 		// create the wrapper skin
@@ -41,6 +45,7 @@ useful.File.prototype.Main = function (config, context) {
 		// return the object
 		return this;
 	};
+	
 	this.update = function (element, readout) {
 		readout.innerHTML = element.value;
 	};
