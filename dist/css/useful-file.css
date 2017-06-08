@@ -29,6 +29,7 @@ Applies the "clearfix" hack to a container with floating content
 	file upload button
 */
 div.file {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   height: 3em;
@@ -40,6 +41,7 @@ div.file {
   position: relative;
   background-color: #ff6a00; }
   div.file * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
   div.file input {
     opacity: 0.01;
