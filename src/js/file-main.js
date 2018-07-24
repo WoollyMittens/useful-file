@@ -1,27 +1,14 @@
-/*
-	Source:
-	van Creij, Maurice (2014). "useful.file.js: File input element", version 20141127, http://www.woollymittens.nl/.
-
-	License:
-	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-*/
-
-// create the constructor if needed
-var useful = useful || {};
-useful.File = useful.File || function () {};
-
-// extend the constructor
-useful.File.prototype.Main = function (config, context) {
+// extend the class
+File.prototype.Main = function (config, context) {
 
 	// PROPERTIES
-	
-	"use strict";
+
 	this.config = config;
 	this.context = context;
 	this.element = config.element;
 
 	// METHODS
-	
+
 	this.init = function () {
 		var wrapper, removed, readout;
 		// create the wrapper skin
@@ -36,22 +23,17 @@ useful.File.prototype.Main = function (config, context) {
 		readout.className = 'file-readout';
 		wrapper.appendChild(readout);
 		// add update event handler
-		var _this = this;
-		this.element.onchange = function () {
-			_this.update(_this.element, readout);
-		};
+		this.element.addEventListener('change', this.update.bind(this, this.element, readout));
 		// update at least once
 		this.update(this.element, readout);
 		// return the object
 		return this;
 	};
-	
-	this.update = function (element, readout) {
+
+	this.update = function (element, readout, evt) {
 		readout.innerHTML = element.value;
 	};
-};
 
-// return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = useful.File.Main;
-}
+	this.init();
+
+};

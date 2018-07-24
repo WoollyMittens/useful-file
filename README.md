@@ -1,4 +1,4 @@
-# useful.file.js: File Selector
+# file.js: File Selector
 
 An alternative for the HTML file input element.
 
@@ -9,27 +9,19 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-file">demo</
 The stylesheet is best included in the header of the document.
 
 ```html
-<link rel="stylesheet" href="./css/useful-file.css"/>
+<link rel="stylesheet" href="./css/file.css"/>
 ```
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-file.js"></script>
-```
-
-To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*.
-
-```html
-<!--[if lte IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<script src="./js/file.js"></script>
 ```
 
 ## How to start the script
 
 ```javascript
-var files = new useful.File().init({
+var files = new File({
 	'elements' : document.querySelectorAll('input.file')
 });
 ```
