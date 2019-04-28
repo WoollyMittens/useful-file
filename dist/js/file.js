@@ -35,9 +35,8 @@ var File = function (config) {
 };
 
 // return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = File;
-}
+if (typeof define != 'undefined') define([], function () { return File });
+if (typeof module != 'undefined') module.exports = File;
 
 // extend the class
 File.prototype.Main = function (config, context) {

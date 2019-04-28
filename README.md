@@ -9,13 +9,29 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-file">demo</
 The stylesheet is best included in the header of the document.
 
 ```html
-<link rel="stylesheet" href="./css/file.css"/>
+<link rel="stylesheet" href="css/file.css"/>
 ```
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/file.js"></script>
+<script src="js/file.js"></script>
+```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'./js/file.js'
+], function(File) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var File = require('js/file.js');
 ```
 
 ## How to start the script

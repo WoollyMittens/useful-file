@@ -35,5 +35,5 @@ var File = function (config) {
 };
 
 // return as a require.js module
-if (typeof define != 'undefined') define(['file'], function () { return File });
+if (typeof define != 'undefined') define([], function () { return File });
 if (typeof module != 'undefined') module.exports = File;
